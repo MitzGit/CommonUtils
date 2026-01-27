@@ -10,4 +10,8 @@ public class StringUtils {
         String restPart = str.substring(1);
         return firstLetter + restPart;
     }
+
+    public static boolean isNullOrEmpty(String str) {
+        return (str == null || str.isEmpty());
+    }
 }
