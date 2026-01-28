@@ -14,4 +14,8 @@ public class StringUtils {
     public static boolean isNullOrEmpty(String str) {
         return (str == null || str.isEmpty());
     }
+
+    public static String emptyIfNull(String str) {
+        return str == null ? "" : str;
+    }
 }
