@@ -4,6 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class StringUtilsTest {
 
@@ -17,5 +18,9 @@ class StringUtilsTest {
         String actual = StringUtils.capitalizeFirstLetter(str);
         //assertThat(actual).isEqualTo(expected);
         assertEquals(expected, actual);
+    }
+
+    void testIsNullOrEmpty_Null() {
+        assertTrue(StringUtils.isNullOrEmpty(null));
     }
 }
