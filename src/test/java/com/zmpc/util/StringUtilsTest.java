@@ -34,4 +34,14 @@ class StringUtilsTest {
     void testIsNullOrEmpty_NotEmpty() {
         assertFalse(StringUtils.isNullOrEmpty("Text"));
     }
+
+    @Test
+    void testEmptyIfNull_Null() {
+        assertEquals("", StringUtils.emptyIfNull(null));
+    }
+
+    @Test
+    void testEmptyIfNull_NotNull() {
+        assertEquals("abc", StringUtils.emptyIfNull("abc"));
+    }
 }
