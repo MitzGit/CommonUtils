@@ -47,6 +47,26 @@ class StringUtilsTest {
 
     @Test
     void testSplitByIndex_Null() {
-        assertNotNull(StringUtils.splitByIndex(null, 0));
+        String[] actual = StringUtils.splitByIndex(null, 0);
+        assertNotNull(actual);
+        assertEquals(2, actual.length);
+        assertEquals("", actual[0]);
+        assertEquals("", actual[1]);
+    }
+
+    @Test
+    void testSplitByIndex_AnyString_3() {
+        String[] actual = StringUtils.splitByIndex("AnyString", 3);
+        assertEquals(2, actual.length);
+        assertEquals("Any", actual[0]);
+        assertEquals("String", actual[1]);
+    }
+
+    @Test
+    void testSplitByIndex_AnyString_0() {
+        String[] actual = StringUtils.splitByIndex("AnyString", 0);
+        assertEquals(2, actual.length);
+        assertEquals("", actual[0]);
+        assertEquals("AnyString", actual[1]);
     }
 }
