@@ -1,4 +1,4 @@
-package com.zmpc.util;
+package com.zmpc.utils;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

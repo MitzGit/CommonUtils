@@ -18,4 +18,12 @@ public class Print {
         System.out.println();
     }
 
+    public static void w(Object... objs) {
+        if (objs.length == 0) {
+            System.out.println();
+        }
+        for (Object obj : objs) {
+            System.out.println(obj);
+        }
+    }
 }

@@ -1,4 +1,4 @@
-package com.zmpc.util;
+package com.zmpc.utils;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class ObjectUtilsTest {
     void testCheckNotNull_null_value() {
         Object obj = null;
 
-        assertThatThrownBy(() -> ObjectUtils.checkNotNull(obj))
+        assertThatThrownBy(() -> ObjectUtils.notNull(obj))
                 .isInstanceOf(NullPointerException.class)
                 .hasMessage("Object must not be null.");
     }
@@ -19,6 +19,6 @@ class ObjectUtilsTest {
     @Test
     void testCheckNotNull_not_null_value() {
         String str = "Some data";
-        assertThatNoException().isThrownBy(() -> ObjectUtils.checkNotNull(str));
+        assertThatNoException().isThrownBy(() -> ObjectUtils.notNull(str));
     }
 }
